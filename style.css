@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+}
+
+.container {
+  background: #ffffff; /* White background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 320px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.display {
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #f9f9f9;
+  color: #333;
+  margin-bottom: 15px;
+  pointer-events: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+button {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Number buttons */
+button:not(.operator) {
+  background: #e0e0e0;
+  color: #333;
+}
+
+button:not(.operator):hover {
+  background: #d5d5d5;
+}
+
+/* Operator buttons in green */
+.operator {
+  background: #4CAF50;
+  color: #fff;
+  font-weight: bold;
+}
+
+.operator:hover {
+  background: #45a045;
+}
+
+button:active {
+  transform: scale(0.98);
+}
